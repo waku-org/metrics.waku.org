@@ -2,8 +2,14 @@
 
 import React from 'react'
 import { useState } from 'react'
+import Benchmarks from './Benchmarks'
+import CommunityMetrics from './CommunityMetrics'
+import Ecosystem from './Ecosystem'
+import NetworkMetrics from './NetworkMetrics'
+import Overview from './Overview'
+import Timeline from './Timeline'
 
-export default function Header() {
+export default function Router() {
   const [mobileMenu, setMobileMenu] = useState(false)
   const [screen, setScreen] = useState(0)
   return (
@@ -24,7 +30,7 @@ export default function Header() {
           <ul class="mt-6 space-y-1">
             <li>
               <div
-                onClick={()=>setScreen(0)}
+                onClick={()=>{setScreen(0); setMobileMenu(false)}}
                 className={screen == 0 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                 >
                 Overview
@@ -59,7 +65,7 @@ export default function Header() {
                 <ul class="mt-2 space-y-1 px-4">
                   <li>
                     <div
-                onClick={()=>setScreen(1)}
+                onClick={()=>{setScreen(1); setMobileMenu(false)}}
                 className={screen == 1 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                       >
                       Community
@@ -68,7 +74,7 @@ export default function Header() {
 
                   <li>
                     <div
-                onClick={()=>setScreen(2)}
+                onClick={()=>{setScreen(2); setMobileMenu(false)}}
                 className={screen == 2 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                       >
                       Network
@@ -106,7 +112,7 @@ export default function Header() {
                 <ul class="mt-2 space-y-1 px-4">
                   <li>
                     <div
-                onClick={()=>setScreen(3)}
+                onClick={()=>{setScreen(3); setMobileMenu(false)}}
                 className={screen == 3 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                       >
                       Timeline
@@ -115,7 +121,7 @@ export default function Header() {
 
                   <li>
                     <div
-                onClick={()=>setScreen(4)}
+                onClick={()=>{setScreen(4); setMobileMenu(false)}}
                 className={screen == 4 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                       >
                       Ecosystem
@@ -128,7 +134,7 @@ export default function Header() {
 
             <li>
               <div
-                onClick={()=>setScreen(5)}
+                onClick={()=>{setScreen(5); setMobileMenu(false)}}
                 className={screen == 5 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
                 >
                 Benchmarks
@@ -153,7 +159,8 @@ export default function Header() {
         </div>
       </div>
       :
-      <div id='mobile-header' className='flex justify-between w-full px-4 py-6 md:hidden'>
+      <div className='block md:hidden w-full'>
+      <div id='mobile-header' className='flex justify-between w-full px-4 py-6'>
           <img src='https://waku.org/theme/image/logo.svg' className='w-20' />
           <button onClick={()=>setMobileMenu(true)} className='md:hidden'>
           <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -161,9 +168,16 @@ export default function Header() {
 </svg>
           </button>
         </div>
+              <div>
+        {
+          screen == 0 && <Overview /> || screen == 1 && <CommunityMetrics /> || screen == 2 && <NetworkMetrics /> || screen == 3 && <Timeline /> || screen == 4 && <Ecosystem /> || screen == 5 && <Benchmarks />
+        }
+      </div>
+        </div>
   }
+        <div className='hidden md:flex w-full'>
 
-        <div id='desktop-nav' class="md:flex h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 hidden">
+        <div id='desktop-nav' class="flex h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 ">
         <div class="px-4 py-6">
             <div className='flex justify-between'>
             <img src='https://waku.org/theme/image/logo.svg' className='w-20' />
@@ -214,7 +228,7 @@ export default function Header() {
                     <div
                 onClick={()=>setScreen(1)}
                 className={screen == 1 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
-                      >
+                >
                       Community
                     </div>
                   </li>
@@ -223,7 +237,7 @@ export default function Header() {
                     <div
                 onClick={()=>setScreen(2)}
                 className={screen == 2 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
-                      >
+                >
                       Network
                     </div>
                   </li>
@@ -261,7 +275,7 @@ export default function Header() {
                     <div
                 onClick={()=>setScreen(3)}
                 className={screen == 3 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
-                      >
+                >
                       Timeline
                     </div>
                   </li>
@@ -270,7 +284,7 @@ export default function Header() {
                     <div
                 onClick={()=>setScreen(4)}
                 className={screen == 4 ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700" : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"}
-                      >
+                >
                       Ecosystem
                     </div>
                   </li>
@@ -305,6 +319,13 @@ export default function Header() {
           </a>
         </div>
       </div>
+      <div>
+        {
+          screen == 0 && <Overview /> || screen == 1 && <CommunityMetrics /> || screen == 2 && <NetworkMetrics /> || screen == 3 && <Timeline /> || screen == 4 && <Ecosystem /> || screen == 5 && <Benchmarks />
+        }
+      </div>
+              </div>
+
     </div>
   )
 }
