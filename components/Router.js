@@ -168,7 +168,7 @@ export default function Router() {
 </svg>
           </button>
         </div>
-              <div>
+              <div className='p-5 w-full'>
         {
           screen == 0 && <Overview /> || screen == 1 && <CommunityMetrics /> || screen == 2 && <NetworkMetrics /> || screen == 3 && <Timeline /> || screen == 4 && <Ecosystem /> || screen == 5 && <Benchmarks />
         }
@@ -177,7 +177,7 @@ export default function Router() {
   }
         <div className='hidden md:flex w-full'>
 
-        <div id='desktop-nav' class="flex h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 ">
+        <div id='desktop-nav' class="flex sticky top-0 h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 ">
         <div class="px-4 py-6">
             <div className='flex justify-between'>
             <img src='https://waku.org/theme/image/logo.svg' className='w-20' />
@@ -305,10 +305,10 @@ export default function Router() {
           </ul>
         </div>
 
-        <div class="sticky inset-x-0 bottom-0 border-t-4 border-e-4 border-[#202021]">
-          <a href="#" class="flex items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 animate-pulse">
+        <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021]">
+          <a href="#" class="flex items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 animate-pulse rounded-lg">
             <div
-              class="h-10 w-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full object-cover"
+              class="h-5 w-5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full object-cover"
               />
 
             <div>
@@ -319,7 +319,7 @@ export default function Router() {
           </a>
         </div>
       </div>
-      <div>
+      <div className='p-10 w-full'>
         {
           screen == 0 && <Overview /> || screen == 1 && <CommunityMetrics /> || screen == 2 && <NetworkMetrics /> || screen == 3 && <Timeline /> || screen == 4 && <Ecosystem /> || screen == 5 && <Benchmarks />
         }
