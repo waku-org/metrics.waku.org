@@ -1,6 +1,26 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { getImageData } from '@/app/api/dockerhub';
+
+
 
 export default function CommunityMetrics() {
+    const [pullCount, setPullCount] = useState(0);
+
+    useEffect(() => {
+        async function fetchPullCount() {
+          try {
+            const imageName = 'statusteam/nim-waku';
+            const imageData = await getImageData();
+            const pulls = imageData.pull_count || 0;
+            setPullCount(pulls);
+          } catch (error) {
+            console.error(error);
+          }
+        }
+    
+        fetchPullCount();
+      }, []);
+
   return (
     <div className=''>
             <div className='flex justify-between items-center'>
@@ -520,7 +540,7 @@ export default function CommunityMetrics() {
                         <div className='space-y-3'>
                             <p class="text-sm text-[#707071] dark:text-gray-400">nwaku docker pulls</p>
 
-                            <p class="text-2xl font-medium text-gray-900 dark:text-white">240</p>
+                            <p class="text-2xl font-medium text-gray-900 dark:text-white">{pullCount}</p>
                         </div>
                     </div>
 
