@@ -5,7 +5,9 @@ export default function CommunityMetrics(props) {
   return (
     <div className="">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl">Community metrics</h1>
+        <h1 className="text-2xl">
+          {props.save !== undefined ? props.save.name : "Community metrics"}
+        </h1>
         <h1 className="text-[#707071] hidden md:block">Powered by Waku</h1>
       </div>
 

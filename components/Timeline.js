@@ -66,6 +66,7 @@ export default function Timeline(props) {
         isLoading={false}
         previous={previous ? props.saves[previous]?.data?.stats : {}}
         setCurrent={setCurrent}
+        save={props.saves[current]}
       />
     );
   }
