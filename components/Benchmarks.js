@@ -97,7 +97,9 @@ export default function Benchmarks() {
       >
         <div className="rounded-xl w-40 h-40 ">
           <div className="m-4">
-            <h1 className="text-xl">Add new benchmark</h1>
+            <h1 className="text-xl">
+              {currentBenchmark ? "Edit" : "Add new"} benchmark
+            </h1>
             <div className="mt-4">
               <form onSubmit={(e) => handleSet(e)} className="space-y-3">
                 <input
