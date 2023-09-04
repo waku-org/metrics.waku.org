@@ -30,9 +30,6 @@ export default function Router() {
   const [overviewLoading, setOverviewLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const [events, setEvents] = useState(null);
-  const [ecosystemDirectory, setEcosystemDirectory] = useState(null);
-
   const [saves, setSaves] = useState({});
 
   useEffect(() => {
@@ -54,9 +51,12 @@ export default function Router() {
         ];
 
         const github_repos = await Github.getReposStats("waku-org", repos);
+        // const twitter = await Twitter.getFollowers();
+        const twitter = 2;
 
         setOverviewLoading(false);
         setStats({
+          twitter,
           discord,
           github,
           github_repos,
@@ -65,8 +65,6 @@ export default function Router() {
         await (async () => {
           const npm = await Npm.getDownloadsLastWeek("@waku/core");
           // console.log(Golang.getDownloads("waku-org/go-waku@v0.5.2/waku"));
-          // const twitter = await Twitter.getFollowers();
-          const twitter = 2;
           const rust = await Rust.getDownloads("waku-bindings");
           const docker = await Docker.getPulls();
           // if (loggedIn) {
