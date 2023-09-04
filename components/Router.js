@@ -336,7 +336,14 @@ export default function Router() {
                 />
               )) ||
               (screen === 2 && <NetworkMetrics />) ||
-              (screen === 3 && <Timeline />) ||
+              (screen === 3 && (
+                <Timeline
+                  stats={stats}
+                  saves={saves}
+                  setSaves={setSaves}
+                  isLoading={isLoading}
+                />
+              )) ||
               (screen === 4 && <Ecosystem />) ||
               (screen === 5 && <Benchmarks />)}
           </div>
@@ -541,7 +548,14 @@ export default function Router() {
               />
             )) ||
             (screen === 2 && <NetworkMetrics />) ||
-            (screen === 3 && <Timeline />) ||
+            (screen === 3 && (
+              <Timeline
+                stats={stats}
+                saves={saves}
+                setSaves={setSaves}
+                isLoading={isLoading}
+              />
+            )) ||
             (screen === 4 && <Ecosystem />) ||
             (screen === 5 && <Benchmarks />)}
         </div>

@@ -2,8 +2,7 @@ import initiateDb from "@/utils/db";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const name: string = request.body.name;
-  const data: object = request.body.data;
+  const { name, data }: { name: string; data: object } = await request.json();
 
   const db = await initiateDb();
 

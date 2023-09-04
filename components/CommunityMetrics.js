@@ -9,7 +9,18 @@ export default function CommunityMetrics(props) {
         <h1 className="text-[#707071] hidden md:block">Powered by Waku</h1>
       </div>
 
-      <div className="space-y-5 mt-10 justify-between">
+      {props.setCurrent !== undefined && (
+        <div className={"flex row mt-2 justify-start"}>
+          <button
+            className={"bg-gray-400 p-2 rounded"}
+            onClick={() => props.setCurrent(null)}
+          >
+            Back
+          </button>
+        </div>
+      )}
+
+      <div className="space-y-5 mt-5 justify-between">
         <h1 className="text-[#707071]">Community channels </h1>
         <CommunityMetricsCard
           title={"Discord members"}
@@ -28,7 +39,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.discord}
+          current={props.stats?.discord}
           previous={props.previous?.data?.stats?.discord}
         />
 
@@ -49,7 +60,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.twitter}
+          current={props.stats?.twitter}
           previous={props.previous?.data?.stats?.twitter}
         />
 
@@ -72,7 +83,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github}
+          current={props.stats?.github}
           previous={props.previous?.data?.stats?.github}
         />
 
@@ -93,7 +104,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.total?.stars}
+          current={props.stats?.github_repos?.total?.stars}
           previous={props.previous?.data?.stats?.github_repos?.total?.stars}
         />
 
@@ -114,7 +125,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.total?.forks}
+          current={props.stats?.github_repos?.total?.forks}
           previous={props.previous?.data?.stats?.github_repos?.total?.forks}
         />
 
@@ -135,7 +146,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.nwaku?.stars}
+          current={props.stats?.github_repos?.nwaku?.stars}
           previous={props.previous?.data?.stats?.github_repos?.nwaku?.stars}
         />
 
@@ -156,7 +167,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.nwaku?.forks}
+          current={props.stats?.github_repos?.nwaku?.forks}
           previous={props.previous?.data?.stats?.github_repos?.nwaku?.forks}
         />
 
@@ -179,7 +190,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.npm}
+          current={props.stats?.npm}
           previous={props.previous?.data?.stats?.npm}
         />
 
@@ -200,7 +211,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku"]?.stars}
+          current={props.stats?.github_repos?.["js-waku"]?.stars}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku"]?.stars
           }
@@ -223,7 +234,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku"]?.forks}
+          current={props.stats?.github_repos?.["js-waku"]?.forks}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku"]?.forks
           }
@@ -245,7 +256,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku"]?.open_issues}
+          current={props.stats?.github_repos?.["js-waku"]?.open_issues}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku"]?.open_issues
           }
@@ -268,7 +279,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.rust}
+          current={props.stats?.rust}
           previous={props.previous?.data?.stats?.rust}
         />
         <CommunityMetricsCard
@@ -288,7 +299,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["waku-rust-bindings"]?.stars}
+          current={props.stats?.github_repos?.["waku-rust-bindings"]?.stars}
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-rust-bindings"]
               ?.stars
@@ -312,7 +323,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["waku-rust-bindings"]?.forks}
+          current={props.stats?.github_repos?.["waku-rust-bindings"]?.forks}
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-rust-bindings"]
               ?.forks
@@ -336,7 +347,7 @@ export default function CommunityMetrics(props) {
           }
           isLoading={props.isLoading}
           current={
-            props.stats.github_repos?.["waku-rust-bindings"]?.open_issues
+            props.stats?.github_repos?.["waku-rust-bindings"]?.open_issues
           }
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-rust-bindings"]
@@ -361,7 +372,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["go-waku"]?.stars}
+          current={props.stats?.github_repos?.["go-waku"]?.stars}
           previous={
             props.previous?.data?.stats?.github_repos?.["go-waku"]?.stars
           }
@@ -384,7 +395,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["go-waku"]?.forks}
+          current={props.stats?.github_repos?.["go-waku"]?.forks}
           previous={
             props.previous?.data?.stats?.github_repos?.["go-waku"]?.forks
           }
@@ -406,7 +417,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["go-waku"]?.open_issues}
+          current={props.stats?.github_repos?.["go-waku"]?.open_issues}
           previous={
             props.previous?.data?.stats?.github_repos?.["go-waku"]?.open_issues
           }
@@ -429,7 +440,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["waku-react-native"]?.stars}
+          current={props.stats?.github_repos?.["waku-react-native"]?.stars}
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-react-native"]
               ?.stars
@@ -453,7 +464,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["waku-react-native"]?.forks}
+          current={props.stats?.github_repos?.["waku-react-native"]?.forks}
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-react-native"]
               ?.forks
@@ -476,7 +487,9 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["waku-react-native"]?.open_issues}
+          current={
+            props.stats?.github_repos?.["waku-react-native"]?.open_issues
+          }
           previous={
             props.previous?.data?.stats?.github_repos?.["waku-react-native"]
               ?.open_issues
@@ -500,7 +513,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku-examples"]?.stars}
+          current={props.stats?.github_repos?.["js-waku-examples"]?.stars}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku-examples"]
               ?.stars
@@ -524,7 +537,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku-examples"]?.forks}
+          current={props.stats?.github_repos?.["js-waku-examples"]?.forks}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku-examples"]
               ?.forks
@@ -547,7 +560,7 @@ export default function CommunityMetrics(props) {
             </span>
           }
           isLoading={props.isLoading}
-          current={props.stats.github_repos?.["js-waku-examples"]?.open_issues}
+          current={props.stats?.github_repos?.["js-waku-examples"]?.open_issues}
           previous={
             props.previous?.data?.stats?.github_repos?.["js-waku-examples"]
               ?.open_issues
