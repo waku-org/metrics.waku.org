@@ -65,7 +65,8 @@ export default function Router() {
         await (async () => {
           const npm = await Npm.getDownloadsLastWeek("@waku/core");
           // console.log(Golang.getDownloads("waku-org/go-waku@v0.5.2/waku"));
-          const twitter = await Twitter.getFollowers();
+          // const twitter = await Twitter.getFollowers();
+          const twitter = 2;
           const rust = await Rust.getDownloads("waku-bindings");
           const docker = await Docker.getPulls();
           // if (loggedIn) {
