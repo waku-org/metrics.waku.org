@@ -144,15 +144,19 @@ export default function Router() {
           </ul>
         </div>
 
-        <div class="sticky inset-x-0 bottom-0 border-t-4 border-e-4 border-[#202021]">
-          <a href="#" class="flex items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 animate-pulse">
+        <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <a href="#" class="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg">
             <div
-              class="h-10 w-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full object-cover"
-              />
+              class="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover"
+              >
+                <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M8 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0a2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1s1-4 6-4s6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg>
+              </div>
 
             <div>
               <p class="text-xs">
-                <strong class="block font-medium">Live</strong>
+                <strong class="block font-medium">Login as core contributor</strong>
               </p>
             </div>
           </a>
@@ -305,15 +309,19 @@ export default function Router() {
           </ul>
         </div>
 
-        <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021]">
-          <a href="#" class="flex items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 animate-pulse rounded-lg">
+        <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <a href="#" class="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg">
             <div
-              class="h-5 w-5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full object-cover"
-              />
+              class="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover"
+              >
+                <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M8 8a3 3 0 1 0 0-6a3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0a2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1s1-4 6-4s6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg>
+              </div>
 
             <div>
               <p class="text-xs">
-                <strong class="block font-medium">Live</strong>
+                <strong class="block font-medium">Login as core contributor</strong>
               </p>
             </div>
           </a>
