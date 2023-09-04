@@ -3,6 +3,7 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import axios from "axios";
 import CommunityMetrics from "@/components/CommunityMetrics";
+import Loader from "@/components/atoms/Loader";
 
 export default function Timeline(props) {
   const [open, setOpen] = useState(false);
@@ -10,14 +11,13 @@ export default function Timeline(props) {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const [snapshot, setSnapshot] = useState(false);
-
   const [current, setCurrent] = useState(null);
   const [previous, setPrevious] = useState(null);
 
   const [name, setName] = useState("");
 
-  async function handleNewSave() {
+  async function handleNewSave(e) {
+    e.preventDefault();
     const res = await axios.post("/api/saves/set", {
       name,
       data: {
@@ -56,7 +56,7 @@ export default function Timeline(props) {
   };
 
   if (props.isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (current !== null) {
@@ -90,23 +90,21 @@ export default function Timeline(props) {
           <div className="m-4">
             <h1 className="text-xl">Snapshot</h1>
             <div className="mt-4">
-              <div className="space-y-3">
+              <form onSubmit={(e) => handleNewSave(e)} className="space-y-3">
                 <input
                   className="border-[#2c2c2c3e] border-2 w-full rounde -lg p-2 text-sm border-2 rounded-lg"
                   placeholder="Name"
                   value={name}
+                  required={true}
                   onChange={(e) => setName(e.target.value)}
                 />
                 <br />
                 <div className="flex justify-end">
-                  <button
-                    className="bg-black rounded-lg text-white p-2"
-                    onClick={handleNewSave}
-                  >
+                  <button className="bg-black rounded-lg text-white p-2">
                     Create snapshot
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -131,7 +129,7 @@ export default function Timeline(props) {
         </button>
       </div>
 
-      {snapshot === false ? (
+      {props.saves?.length ? (
         <div class="overflow-x-auto mt-10 rounded-lg">
           <table class="min-w-full divide-y-2 divide-black bg-white text-sm dark:divide-black dark:bg-[#202021]">
             <thead class="divide-y divide-gray-200 dark:divide-gray-700">
