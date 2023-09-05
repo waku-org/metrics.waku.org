@@ -143,7 +143,7 @@ export default function Overview(props) {
             </svg>
           </div>
           <div className="text-xs mt-4 text-[#737378]">
-            Network metrics include data related to Waku's node
+            Network metrics include data related to Waku node delivery and network
           </div>
           <div className="flex space-x-3 mt-5">
             <span className="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
