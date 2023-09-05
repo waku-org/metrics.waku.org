@@ -132,30 +132,30 @@ export default function Timeline(props) {
       )}
 
       {props.saves?.length ? (
-        <div class="overflow-x-auto mt-10 rounded-lg">
-          <table class="min-w-full divide-y-2 divide-black bg-white text-sm dark:divide-black dark:bg-[#202021]">
-            <thead class="divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="overflow-x-auto mt-10 rounded-lg">
+          <table className="min-w-full divide-y-2 divide-black bg-white text-sm dark:divide-black dark:bg-[#202021]">
+            <thead className="divide-y divide-gray-200 dark:divide-gray-700">
               <tr>
-                <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white">
+                <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 dark:text-white">
                   Name
                 </td>
-                <td class="whitespace-nowrap font-medium px-4 py-2 text-gray-700 dark:text-gray-200">
+                <td className="whitespace-nowrap font-medium px-4 py-2 text-gray-700 dark:text-gray-200">
                   Date
                 </td>
-                <td class="whitespace-nowrap px-4 py-2"></td>
+                <td className="whitespace-nowrap px-4 py-2"></td>
               </tr>
             </thead>
 
-            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
               {props.saves.map((save, index) => (
                 <tr key={index}>
-                  <td class="whitespace-nowrap px-4 py-2 text-gray-400">
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-400">
                     {save.name}
                   </td>
-                  <td class="whitespace-nowrap px-4 py-2 text-gray-400">
+                  <td className="whitespace-nowrap px-4 py-2 text-gray-400">
                     {new Date(save.created_at).toDateString()}
                   </td>
-                  <td class="whitespace-nowrap px-4 py-2">
+                  <td className="whitespace-nowrap px-4 py-2">
                     <button
                       onClick={() => {
                         setCurrent(index);
@@ -163,7 +163,7 @@ export default function Timeline(props) {
                           index !== props.saves?.length - 1 ? index + 1 : null
                         );
                       }}
-                      class="inline-block rounded bg-black px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                      className="inline-block rounded bg-black px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                     >
                       View snapshot
                     </button>

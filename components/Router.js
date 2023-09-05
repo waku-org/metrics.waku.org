@@ -132,9 +132,9 @@ export default function Router() {
       {mobileMenu === true ? (
         <div
           id="mobile-nav"
-          class="flex h-screen flex-col justify-between bg-[#202021] w-full md:w-auto md:hidden"
+          className="flex h-screen flex-col justify-between bg-[#202021] w-full md:w-auto md:hidden"
         >
-          <div class="px-4 py-6">
+          <div className="px-4 py-6">
             <div className="flex justify-between">
               <img
                 src="https://waku.org/theme/image/logo.svg"
@@ -158,7 +158,7 @@ export default function Router() {
               </button>
             </div>
 
-            <ul class="mt-6 space-y-1">
+            <ul className="mt-6 space-y-1">
               <li>
                 <div
                   onClick={() => {
@@ -176,14 +176,14 @@ export default function Router() {
               </li>
 
               <li>
-                <details class="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <span class="text-sm font-medium">Metrics</span>
+                <details className="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span className="text-sm font-medium">Metrics</span>
 
-                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -196,7 +196,7 @@ export default function Router() {
                     </span>
                   </summary>
 
-                  <ul class="mt-2 space-y-1 px-4">
+                  <ul className="mt-2 space-y-1 px-4">
                     <li>
                       <div
                         onClick={() => {
@@ -233,14 +233,14 @@ export default function Router() {
               </li>
 
               <li>
-                <details class="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <span class="text-sm font-medium"> Growth </span>
+                <details className="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span className="text-sm font-medium"> Growth </span>
 
-                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -253,7 +253,7 @@ export default function Router() {
                     </span>
                   </summary>
 
-                  <ul class="mt-2 space-y-1 px-4">
+                  <ul className="mt-2 space-y-1 px-4">
                     <li>
                       <div
                         onClick={() => {
@@ -307,14 +307,14 @@ export default function Router() {
             </ul>
           </div>
 
-          <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
             <div
               onClick={() => {
                 session === false ? handleSignIn() : handleSignOut();
               }}
-              class="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg"
+              className="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg"
             >
-              <div class="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover">
+              <div className="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover">
                 {session && session?.user?.user_metadata?.avatar_url ? (
                   <img src={session?.user?.user_metadata?.avatar_url} />
                 ) : (
@@ -333,8 +333,8 @@ export default function Router() {
               </div>
 
               <div>
-                <p class="text-xs">
-                  <strong class="block font-medium">
+                <p className="text-xs">
+                  <strong className="block font-medium">
                     {session === false
                       ? "Login as core contributor"
                       : "Sign Out"}
@@ -402,9 +402,9 @@ export default function Router() {
       <div className="hidden md:flex w-full">
         <div
           id="desktop-nav"
-          class="flex sticky top-0 h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 "
+          className="flex sticky top-0 h-screen flex-col justify-between bg-[#202021] w-full md:w-1/6 "
         >
-          <div class="px-4 py-6">
+          <div className="px-4 py-6">
             <div className="flex justify-between">
               <img
                 src="https://waku.org/theme/image/logo.svg"
@@ -428,7 +428,7 @@ export default function Router() {
               </button>
             </div>
 
-            <ul class="mt-6 space-y-1">
+            <ul className="mt-6 space-y-1">
               <li>
                 <div
                   onClick={() => setScreen(0)}
@@ -443,14 +443,14 @@ export default function Router() {
               </li>
 
               <li>
-                <details class="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <span class="text-sm font-medium">Metrics</span>
+                <details className="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span className="text-sm font-medium">Metrics</span>
 
-                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -463,7 +463,7 @@ export default function Router() {
                     </span>
                   </summary>
 
-                  <ul class="mt-2 space-y-1 px-4">
+                  <ul className="mt-2 space-y-1 px-4">
                     <li>
                       <div
                         onClick={() => setScreen(1)}
@@ -494,14 +494,14 @@ export default function Router() {
               </li>
 
               <li>
-                <details class="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <span class="text-sm font-medium"> Growth </span>
+                <details className="group [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <span className="text-sm font-medium"> Growth </span>
 
-                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                    <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
+                        className="h-5 w-5"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -514,7 +514,7 @@ export default function Router() {
                     </span>
                   </summary>
 
-                  <ul class="mt-2 space-y-1 px-4">
+                  <ul className="mt-2 space-y-1 px-4">
                     <li>
                       <div
                         onClick={() => setScreen(3)}
@@ -559,14 +559,14 @@ export default function Router() {
             </ul>
           </div>
 
-          <div class="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
             <div
               onClick={() => {
                 session === false ? handleSignIn() : handleSignOut();
               }}
-              class="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg"
+              className="flex space-x-3 items-center gap-2 bg-[#000000] p-4 hover:bg-gray-50 rounded-lg"
             >
-              <div class="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover">
+              <div className="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover">
                 {session && session?.user?.user_metadata?.avatar_url ? (
                   <img src={session?.user?.user_metadata?.avatar_url} />
                 ) : (
@@ -584,8 +584,8 @@ export default function Router() {
                 )}
               </div>
               <div>
-                <p class="text-xs">
-                  <strong class="block font-medium">
+                <p className="text-xs">
+                  <strong className="block font-medium">
                     {session === false
                       ? "Login as core contributor"
                       : "Sign Out"}

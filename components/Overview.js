@@ -119,8 +119,8 @@ export default function Overview(props) {
             social audience and outreach.
           </div>
           <div className="flex space-x-3 mt-5">
-            <span class="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
-              <p class="whitespace-nowrap text-xs">Beta</p>
+            <span className="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
+              <p className="whitespace-nowrap text-xs">Beta</p>
             </span>
           </div>
         </div>
@@ -146,8 +146,8 @@ export default function Overview(props) {
             Network metrics include data related to Waku's node
           </div>
           <div className="flex space-x-3 mt-5">
-            <span class="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
-              <p class="whitespace-nowrap text-xs">Work in progress</p>
+            <span className="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
+              <p className="whitespace-nowrap text-xs">Work in progress</p>
             </span>
           </div>
         </div>
@@ -167,9 +167,9 @@ export default function Overview(props) {
             <path
               fill="none"
               stroke="#ffffff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
               d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM7 7h10M7 12h10M7 17h6"
             />
           </svg>

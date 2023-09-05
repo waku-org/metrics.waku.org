@@ -80,9 +80,9 @@ export default function Ecosystem(props) {
       <path
         fill="none"
         stroke="#000000"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
         d="m7 7l10 10M7 17L17 7"
       />
     </svg>
@@ -134,7 +134,7 @@ export default function Ecosystem(props) {
                     type="file"
                     required={current === false}
                     onChange={(e) => setImage(e.target.files[0])}
-                    class="hidden"
+                    className="hidden"
                     name="file1"
                     accept={".png"}
                   />
@@ -200,9 +200,9 @@ export default function Ecosystem(props) {
           {ecosystem.map((project, index) => (
             <div
               key={index}
-              class="flex md:w-auto items-end justify-between rounded-lg bg-white p-6 dark:bg-[#202021]"
+              className="flex md:w-auto items-end justify-between rounded-lg bg-white p-6 dark:bg-[#202021]"
             >
-              <div class="flex items-center gap-4">
+              <div className="flex items-center gap-4">
                 <img
                   className="rounded-full w-16 h-16 bg-white"
                   src={`https://wmpoapaaynbjbqtjjtdy.supabase.co/storage/v1/object/public/public/public/${project.id}.png`}
@@ -210,11 +210,11 @@ export default function Ecosystem(props) {
                 />
 
                 <div className="space-y-3">
-                  <p class="text-lg text-[#707071] dark:text-white">
+                  <p className="text-lg text-[#707071] dark:text-white">
                     {project.name}
                   </p>
 
-                  <p class="text-xs font-medium text-gray-900 dark:text-gray-400">
+                  <p className="text-xs font-medium text-gray-900 dark:text-gray-400">
                     {project.description}
                   </p>
                 </div>

@@ -158,17 +158,17 @@ export default function Benchmarks(props) {
       )}
 
       {benchmarks.length ? (
-        <div class="flow-root rounded-lg border border-gray-100 py-3 shadow-sm dark:border-gray-700 mt-10">
-          <dl class="-my-3 divide-y divide-gray-100 text-sm dark:divide-gray-700">
+        <div className="flow-root rounded-lg border border-gray-100 py-3 shadow-sm dark:border-gray-700 mt-10">
+          <dl className="-my-3 divide-y divide-gray-100 text-sm dark:divide-gray-700">
             {benchmarks.map((benchmark, index) => (
               <div
                 key={index}
-                class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-[#202021] sm:grid-cols-5 sm:gap-4"
+                className="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-[#202021] sm:grid-cols-5 sm:gap-4"
               >
-                <dt class="font-medium text-gray-900 dark:text-white">
+                <dt className="font-medium text-gray-900 dark:text-white">
                   {benchmark.name}
                 </dt>
-                <dd class="text-gray-700 dark:text-gray-200 sm:col-span-2">
+                <dd className="text-gray-700 dark:text-gray-200 sm:col-span-2">
                   {benchmark.value}
                 </dd>
                 <dd className="sm:col-span-2">
