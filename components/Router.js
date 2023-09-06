@@ -307,7 +307,7 @@ export default function Router() {
             </ul>
           </div>
 
-          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1 hover:text-black">
             <div
               onClick={() => {
                 session === false ? handleSignIn() : handleSignOut();
@@ -469,8 +469,8 @@ export default function Router() {
                         onClick={() => setScreen(1)}
                         className={
                           screen === 1
-                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"
+                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 cursor-pointer"
+                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white cursor-pointer"
                         }
                       >
                         Community
@@ -482,8 +482,8 @@ export default function Router() {
                         onClick={() => setScreen(2)}
                         className={
                           screen === 2
-                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"
+                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 cursor-pointer"
+                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white cursor-pointer"
                         }
                       >
                         Network
@@ -494,8 +494,8 @@ export default function Router() {
               </li>
 
               <li>
-                <details className="group [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                <details className="group [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+                  <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 cursor-pointer">
                     <span className="text-sm font-medium"> Growth </span>
 
                     <span className="shrink-0 transition duration-300 group-open:-rotate-180">
@@ -520,8 +520,8 @@ export default function Router() {
                         onClick={() => setScreen(3)}
                         className={
                           screen === 3
-                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"
+                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 cursor-pointer"
+                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white cursor-pointer" 
                         }
                       >
                         Timeline
@@ -533,8 +533,8 @@ export default function Router() {
                         onClick={() => setScreen(4)}
                         className={
                           screen === 4
-                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"
+                            ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 cursor-pointer "
+                            : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white cursor-pointer"
                         }
                       >
                         Ecosystem
@@ -549,8 +549,8 @@ export default function Router() {
                   onClick={() => setScreen(5)}
                   className={
                     screen === 5
-                      ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
-                      : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white"
+                      ? "block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 cursor-pointer"
+                      : "block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-black hover:text-white cursor-pointer"
                   }
                 >
                   Benchmarks
@@ -559,7 +559,7 @@ export default function Router() {
             </ul>
           </div>
 
-          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1">
+          <div className="sticky inset-x-0 bottom-0 border-x-4 border-[#202021] mb-1 hover:text-black cursor-pointer">
             <div
               onClick={() => {
                 session === false ? handleSignIn() : handleSignOut();
@@ -568,7 +568,7 @@ export default function Router() {
             >
               <div className="h-10 w-10 flex items-center justify-center bg-[#202021] rounded-full object-cover">
                 {session && session?.user?.user_metadata?.avatar_url ? (
-                  <img src={session?.user?.user_metadata?.avatar_url} />
+                  <img className="rounded-full" src={session?.user?.user_metadata?.avatar_url} />
                 ) : (
                   <svg
                     width="20"

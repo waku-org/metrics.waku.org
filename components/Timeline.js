@@ -174,7 +174,7 @@ export default function Timeline(props) {
           </table>
         </div>
       ) : (
-        <div>Snapshot data</div>
+        <div>Timeline data is empty</div>
       )}
     </div>
   );

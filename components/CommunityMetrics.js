@@ -12,12 +12,15 @@ export default function CommunityMetrics(props) {
       </div>
 
       {props.setCurrent !== undefined && (
-        <div className={"flex row mt-2 justify-start"}>
+        <div className={"flex row mt-10 justify-start"}>
           <button
-            className={"bg-gray-400 p-2 rounded"}
+            className={"bg-[#707071] p-2 rounded"}
             onClick={() => props.setCurrent(null)}
           >
-            Back
+            <svg className="w-5 h-5" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#000" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"/>
+    <path fill="#000" d="m237.248 512l265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"/>
+</svg>
           </button>
         </div>
       )}
