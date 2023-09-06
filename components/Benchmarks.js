@@ -102,7 +102,7 @@ export default function Benchmarks(props) {
         onClose={onCloseModal}
         center
       >
-        <div className="rounded-xl w-40 h-40 ">
+        <div className="rounded-xl">
           <div className="m-4">
             <h1 className="text-xl">
               {currentBenchmark ? "Edit" : "Add new"} benchmark

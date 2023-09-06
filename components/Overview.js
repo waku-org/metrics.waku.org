@@ -115,8 +115,7 @@ export default function Overview(props) {
             </svg>
           </div>
           <div className="text-xs mt-4 text-[#737378]">
-            Community metrics include data related to adoption, user base,
-            social audience and outreach.
+            Community metrics can be useful in evaluating the growth trajectory of Waku. These metrics include data related to developer adoption, user base and other parts of Waku community.
           </div>
           <div className="flex space-x-3 mt-5">
             <span className="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
@@ -143,7 +142,7 @@ export default function Overview(props) {
             </svg>
           </div>
           <div className="text-xs mt-4 text-[#737378]">
-            Network metrics include data related to Waku node delivery and network
+            Network metrics include statistical and benchmark data related to Waku network. These metrics include data related to node volume, network capacity, scalability and performance.
           </div>
           <div className="flex space-x-3 mt-5">
             <span className="inline-flex items-center justify-center rounded-full bg-[#737378] px-2.5 py-0.5 text-[#000000]">
@@ -153,17 +152,19 @@ export default function Overview(props) {
         </div>
       </div>
 
+      <a target="_blank" href="https://docs.waku.org">
+
       <div
         id="docs"
         className="mt-10 border-[#202021] hover:border-white border-4 rounded-lg p-6"
-      >
+        >
         <div className="flex justify-between items-center">
           <h1 className="text-xl">Documentation</h1>
           <svg
             className="w-10 h-10"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            >
             <path
               fill="none"
               stroke="#ffffff"
@@ -171,29 +172,32 @@ export default function Overview(props) {
               strokeLinejoin="round"
               strokeWidth="1.5"
               d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM7 7h10M7 12h10M7 17h6"
-            />
+              />
           </svg>
         </div>
       </div>
+              </a>
+      <a href="https://github.com/waku-org/metrics.waku.org/issues" target="_blank">
 
       <div
         id="propose-a-metric"
         className="mt-10 border-[#202021] hover:border-white border-4 rounded-lg p-6"
-      >
+        >
         <div className="flex justify-between items-center">
           <h1 className="text-xl">Propose a new metric</h1>
           <svg
             className="w-10 h-10"
             viewBox="0 0 26 26"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            >
             <path
               fill="#ffffff"
               d="M12.906-.031a1 1 0 0 0-.125.031A1 1 0 0 0 12 1v1H3a3 3 0 0 0-3 3v13c0 1.656 1.344 3 3 3h9v.375l-5.438 2.719a1.006 1.006 0 0 0 .875 1.812L12 23.625V24a1 1 0 1 0 2 0v-.375l4.563 2.281a1.006 1.006 0 0 0 .875-1.812L14 21.375V21h9c1.656 0 3-1.344 3-3V5a3 3 0 0 0-3-3h-9V1a1 1 0 0 0-1.094-1.031zM2 5h22v13H2V5zm18.875 1a1 1 0 0 0-.594.281L17 9.563L14.719 7.28a1 1 0 0 0-1.594.219l-2.969 5.188l-1.219-3.063a1 1 0 0 0-1.656-.344l-3 3a1.016 1.016 0 1 0 1.439 1.44l1.906-1.906l1.438 3.562a1 1 0 0 0 1.812.125l3.344-5.844l2.062 2.063a1 1 0 0 0 1.438 0l4-4A1 1 0 0 0 20.875 6z"
-            />
+              />
           </svg>
         </div>
       </div>
+              </a>
     </div>
   );
 }

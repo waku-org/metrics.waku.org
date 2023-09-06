@@ -114,7 +114,7 @@ export default function Ecosystem(props) {
         onClose={onCloseModal}
         center
       >
-        <div className="rounded-xl w-40 h-40 ">
+        <div className="rounded-xl">
           <div className="m-4">
             <h1 className="text-xl">{current ? "Edit" : "Add new"} project</h1>
             <div className="mt-4">
@@ -173,6 +173,7 @@ export default function Ecosystem(props) {
           </div>
         </div>
       </Modal>
+
 
       {props.isLoggedIn && (
         <div className="flex justify-end mt-10 space-x-5">

@@ -86,7 +86,7 @@ export default function Timeline(props) {
         onClose={onCloseModal}
         center
       >
-        <div className="rounded-xl w-40 h-40 ">
+        <div className="rounded-xl">
           <div className="m-4">
             <h1 className="text-xl">Snapshot</h1>
             <div className="mt-4">
@@ -146,7 +146,7 @@ export default function Timeline(props) {
               </tr>
             </thead>
 
-            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tbody className="divide-y divide-gray-200 dark:divide-black">
               {props.saves.map((save, index) => (
                 <tr key={index}>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-400">
@@ -163,7 +163,7 @@ export default function Timeline(props) {
                           index !== props.saves?.length - 1 ? index + 1 : null
                         );
                       }}
-                      className="inline-block rounded bg-black px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                      className="inline-block rounded bg-black px-4 py-2 text-xs font-medium text-white hover:bg-white hover:text-black"
                     >
                       View snapshot
                     </button>
