@@ -12,7 +12,7 @@
     "@supabase/auth-helpers-nextjs": "^0.7.4",
     "@supabase/supabase-js": "^2.33.1",
     "autoprefixer": "10.4.15",
-    "axios": "^1.5.0",
+    "axios": "^1.6.0",
     "axios-oauth-1.0a": "^0.3.6",
     "cheerio": "^1.0.0-rc.12",
     "encoding": "^0.1.13",
