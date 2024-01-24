@@ -70,6 +70,7 @@ export default function Router() {
         const twitter = 2;
 
         setOverviewLoading(false);
+        console.log("loading...")
         setStats({
           twitter,
           discord,
@@ -370,7 +371,7 @@ export default function Router() {
               <Overview
                 stats={stats}
                 isLoading={overviewLoading}
-                previous={Object.values(saves)[Object.keys(saves).length - 1]}
+                previous={saves && Object.values(saves)[Object.keys(saves).length - 1]}
               />
             )) ||
               (screen === 1 && (
@@ -378,7 +379,7 @@ export default function Router() {
                   stats={stats}
                   isLoading={isLoading}
                   previous={
-                    Object.keys(saves).length
+                    saves && Object.keys(saves).length
                       ? Object.values(saves)[Object.keys(saves).length - 1]
                       : {}
                   }
@@ -601,7 +602,7 @@ export default function Router() {
               stats={stats}
               isLoading={overviewLoading}
               previous={
-                Object.keys(saves).length
+                saves && Object.keys(saves).length
                   ? Object.values(saves)[Object.keys(saves).length - 1]
                   : {}
               }
@@ -612,7 +613,7 @@ export default function Router() {
                 stats={stats}
                 isLoading={isLoading}
                 previous={
-                  Object.keys(saves).length
+                  saves && Object.keys(saves).length
                     ? Object.values(saves)[Object.keys(saves).length - 1]
                     : {}
                 }
