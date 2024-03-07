@@ -11,7 +11,7 @@ export default function Overview(props) {
   console.log(props.saves)
   const data = [
     {
-      name: 'Twitter',
+      name: 'Node operator',
       value: 456,
       href: 'https://twitter.com/tremorlabs',
       icon: function TwitterIcon() {
@@ -30,7 +30,7 @@ export default function Overview(props) {
       },
     },
     {
-      name: 'Google',
+      name: 'Hacker',
       value: 351,
       href: 'https://google.com',
       icon: function GoogleIcon() {
@@ -49,7 +49,7 @@ export default function Overview(props) {
       },
     },
     {
-      name: 'GitHub',
+      name: 'Lurker',
       value: 271,
       href: 'https://github.com/tremorlabs/tremor',
       icon: function GitHubIcon() {
@@ -68,7 +68,7 @@ export default function Overview(props) {
       },
     },
     {
-      name: 'Reddit',
+      name: 'IFT CC',
       value: 191,
       href: 'https://reddit.com',
       icon: function RedditIcon() {
@@ -87,7 +87,7 @@ export default function Overview(props) {
       },
     },
     {
-      name: 'Youtube',
+      name: 'Partner',
       value: 91,
       href: 'https://www.youtube.com/@tremorlabs3079',
       icon: function YouTubeIcon() {
