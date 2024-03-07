@@ -86,13 +86,13 @@ export default function Timeline(props) {
         onClose={onCloseModal}
         center
       >
-        <div className="rounded-xl">
+        <div className="">
           <div className="m-4">
             <h1 className="text-xl">Snapshot</h1>
             <div className="mt-4">
               <form onSubmit={(e) => handleNewSave(e)} className="space-y-3">
                 <input
-                  className="border-[#2c2c2c3e] border-2 w-full rounde -lg p-2 text-sm border-2 rounded-lg"
+                  className="border-[#2c2c2c3e] border-2 w-full  p-2 text-sm"
                   placeholder="Name"
                   value={name}
                   required={true}
@@ -100,7 +100,7 @@ export default function Timeline(props) {
                 />
                 <br />
                 <div className="flex justify-end">
-                  <button className="bg-black rounded-lg text-white p-2">
+                  <button className="bg-black text-white p-2">
                     Create snapshot
                   </button>
                 </div>

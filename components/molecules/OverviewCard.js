@@ -1,9 +1,12 @@
 import React from "react";
 import Percentage from "@/components/molecules/Percentage";
 
+import { Card } from "@acid-info/lsd-react";
+
+
 export default function OverviewCard(props) {
   return (
-    <div className="flex md:w-auto items-end justify-between rounded-lg bg-white p-6 dark:bg-[#202021]">
+    <div className="flex md:w-auto items-end justify-between border p-6">
       <div className="flex items-center gap-4">
         {props.icon}
 

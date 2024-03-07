@@ -7,7 +7,7 @@ export default function Percentage(props) {
 
   return (
     <div
-      className={`inline-flex gap-2 rounded  p-1 ${
+      className={`inline-flex gap-2  p-1 ${
         props.current >= previous
           ? "bg-green-700 text-white"
           : "bg-red-700 text-white"
