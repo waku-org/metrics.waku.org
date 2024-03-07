@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@acid-info/lsd-react": "^0.1.0-beta.3",
+    "@headlessui/react": "^1.7.18",
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@remixicon/react": "^4.2.0",
     "@supabase/auth-helpers-nextjs": "^0.7.4",
     "@supabase/supabase-js": "^2.33.1",
+    "@tremor/react": "^3.14.1",
     "autoprefixer": "10.4.15",
     "axios": "^1.5.0",
     "axios-oauth-1.0a": "^0.3.6",
     "cheerio": "^1.0.0-rc.12",
+    "discord.js": "^14.14.1",
     "encoding": "^0.1.13",
     "eslint": "8.48.0",
     "eslint-config-next": "14.0.4",
@@ -26,9 +32,12 @@
     "react-responsive-modal": "^6.4.2",
     "reactjs-popup": "^2.0.5",
     "tailwindcss": "3.3.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "zlib": "^1.0.5",
+    "zlib-sync": "^0.1.9"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "@types/react": "18.2.21"
   }
 }
